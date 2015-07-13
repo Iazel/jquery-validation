@@ -76,10 +76,10 @@ test("email", function() {
 	ok( method( "bart+bart@tokbox.travel" ), "Valid email" );
 	ok( method( "n@d.tld" ), "Valid email" );
 	ok( method( "bla.blu@g.mail.com"), "Valid email" );
-	ok( method( "name@domain" ), "Valid email" );
 	ok( method( "name.@domain.tld" ), "Valid email" );
 	ok( method( "name@website.a" ), "Valid email" );
 	ok( method( "name@pro.photography" ), "Valid email" );
+	ok(!method( "name@domain" ), "Invalid email" );
 	ok(!method( "ole@føtex.dk"), "Invalid email" );
 	ok(!method( "jörn@bassistance.de"), "Invalid email" );
 	ok(!method( "name" ), "Invalid email" );
